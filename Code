@@ -1,0 +1,40 @@
+def get_response(user_input):
+    user_input = user_input.lower()
+
+    if "hello" in user_input or "hi" in user_input:
+        return "Hello! How can I help you?"
+
+    elif "how are you" in user_input:
+        return "I'm just a bot, but I'm doing great!"
+
+    elif "your name" in user_input:
+        return "I'm a Mini Chatbot created for a GitHub project."
+
+    elif "course" in user_input:
+        return "I can help with basic programming and project ideas."
+
+    elif "help" in user_input:
+        return "Try asking things like 'hello', 'your name', or 'course'."
+
+    elif "bye" in user_input or "exit" in user_input:
+        return "Goodbye! Have a nice day!"
+
+    else:
+        return "Sorry, I don't understand that."
+
+
+def main():
+    print("=== Mini Chatbot ===")
+    print("Type 'exit' to quit\n")
+
+    while True:
+        user_input = input("You: ")
+        response = get_response(user_input)
+        print("Bot:", response)
+
+        if "bye" in user_input.lower() or "exit" in user_input.lower():
+            break
+
+
+if __name__ == "__main__":
+    main()
